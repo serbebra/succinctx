@@ -1,39 +1,23 @@
-# Enviroment Variables
-**/.env
+# Environment Variables
+.env
 
-# Go Modules
-**/vendor
+# Dependencies
+node_modules/
+vendor/
 
-# IDE
-*.log
-.idea/
+# Build outputs
+*.bin
+build/
+dist/
+target/
 
-# MacOS
-**/.DS_Store
-
-# Keystore
-keystore
-
-# Ignoring files generated from CLI build
-**/*.bin
-**/target
-**/build
-**/data
-
-# Solidity
-**/__pycache__
-**/FunctionVerifier.sol
-**/broadcast
-
-# Platform
-proof.json
-output.json
-**/verifier-build
-**/verifier-build-groth16
-plonky2x/core/wrapped
-*.tar.gz
-
-# Typescript
+# TypeScript
+tsconfig.tsbuildinfo
+# Yarn Zero-installs
+# Swap the comments on the following lines if you don't wish to use zero-installs
+# More details: https://yarnpkg.com/features/zero-installs
+.yarn/cache
+#.pnp.*
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -41,12 +25,28 @@ plonky2x/core/wrapped
 !.yarn/sdks
 !.yarn/versions
 
-# Swap the comments on the following lines if you don't wish to use zero-installs
-# Documentation here: https://yarnpkg.com/features/zero-installs
-!.yarn/cache
-#.pnp.*
+# IDEs and editors
+.idea/
+*.log
 
-node_modules
+# macOS system files
+.DS_Store
 
-dist/
-tsconfig.tsbuildinfo
+# Keystore
+keystore/
+
+# Solidity
+__pycache__/
+FunctionVerifier.sol
+broadcast/
+
+# Platform specific
+proof.json
+output.json
+verifier-build/
+verifier-build-groth16/
+plonky2x/core/wrapped/
+*.tar.gz
+
+# Miscellaneous
+data/
